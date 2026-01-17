@@ -12,6 +12,7 @@ else
 fi
 
 commit_msg="${current_date} ${extra_msg}"
+
 git pull
 git add .
 git commit -m "${commit_msg}"
