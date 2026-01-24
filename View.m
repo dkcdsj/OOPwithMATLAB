@@ -3,10 +3,16 @@ classdef View < handle
         hFig
         hEdit
     end
+    properties(Dependent)
+        text
+    end
     methods
         function obj = View()
-            obj.hFig = figure('Position', [100, 100, 400, 300]);
+            obj.hFig = figure();
             obj.hEdit = uicontrol('Style', 'edit', 'parent', obj.hFig); 
+        end
+        function str = get.text(obj)
+            str = get(obj.hEdit, 'String');
         end
     end
 end
