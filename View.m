@@ -14,5 +14,8 @@ classdef View < handle
         function str = get.text(obj)
             str = get(obj.hEdit, 'String');
         end
+        function set.text(obj, str)
+            set(obj.hEdit, 'String', str);
+        end
     end
 end
